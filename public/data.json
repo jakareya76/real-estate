@@ -1,0 +1,145 @@
+[
+  {
+    "id": 1,
+    "estate_title": "Modern Condo with City View",
+    "segment_name": "City Condos",
+    "description": "Immerse yourself in the epitome of urban luxury with this modern condo boasting panoramic views of the bustling cityscape. Located in the heart of vibrant San Francisco, this sleek residence offers a perfect blend of sophistication and convenience. Step onto the private terrace to witness stunning sunsets over the iconic skyline. Indulge in the exclusive amenities including a rooftop deck, state-of-the-art fitness center, attentive concierge service, and secure parking garage.",
+    "price": "$800,000",
+    "status": "sale",
+    "area": "1,200 sq ft",
+    "location": "San Francisco, California",
+    "facilities": [
+      "Roof Deck",
+      "Fitness Center",
+      "Concierge Service",
+      "Parking Garage"
+    ],
+    "image": "https://i.ibb.co/s6jNs2X/modern-condo.jpg"
+  },
+  {
+    "id": 2,
+    "estate_title": "Spacious Family Home with Garden",
+    "segment_name": "Family Homes",
+    "description": "Welcome to your dream family retreat nestled in the serene surroundings of Seattle, Washington. This spacious home offers ample room for relaxation and entertainment, featuring a sprawling garden where children can play freely and adults can unwind amidst nature's beauty. With a perfect fusion of comfort and functionality, this property includes versatile spaces such as a cozy deck, home office, and playroom, catering to the diverse needs of modern family living.",
+    "price": "$600,000",
+    "status": "sale",
+    "area": "2,500 sq ft",
+    "location": "Seattle, Washington",
+    "facilities": ["Garden", "Deck", "Home Office", "Playroom"],
+    "image": "https://i.ibb.co/ZL9t60Y/family-home.jpg"
+  },
+  {
+    "id": 3,
+    "estate_title": "Luxury Penthouse with Panoramic Views",
+    "segment_name": "Luxury Apartments",
+    "description": "Experience the epitome of luxury living in this magnificent penthouse located in the heart of Los Angeles, California. Perched high above the city skyline, this lavish residence offers breathtaking panoramic views from every angle. Immerse yourself in the lap of luxury with a private terrace, indulgent swimming pool, cutting-edge home automation, and round-the-clock security, ensuring a lifestyle of unparalleled comfort and sophistication.",
+    "price": "$3,000,000",
+    "status": "sale",
+    "area": "4,000 sq ft",
+    "location": "Los Angeles, California",
+    "facilities": [
+      "Private Terrace",
+      "Swimming Pool",
+      "Home Automation",
+      "24/7 Security"
+    ],
+    "image": "https://i.ibb.co/YZjZWw6/luxury-penthouse.jpg"
+  },
+  {
+    "id": 4,
+    "estate_title": "Cozy Cottage in the Countryside",
+    "segment_name": "Countryside Retreats",
+    "description": "Escape the hustle and bustle of city life and embrace the tranquility of Asheville, North Carolina, in this charming countryside cottage. Nestled amidst lush greenery and scenic trails, this cozy retreat offers a peaceful sanctuary away from the stresses of modern living. Relax by the fireplace, unwind on the wraparound porch, or explore the verdant garden and nature trails, immersing yourself in the beauty of the surrounding countryside.",
+    "price": "$350,000",
+    "status": "sale",
+    "area": "1,800 sq ft",
+    "location": "Asheville, North Carolina",
+    "facilities": [
+      "Fireplace",
+      "Wraparound Porch",
+      "Garden Shed",
+      "Nature Trails"
+    ],
+    "image": "https://i.ibb.co/gF1PFZD/countryside-cottage.jpg"
+  },
+  {
+    "id": 5,
+    "estate_title": "Chic Downtown Apartment",
+    "segment_name": "Urban Rentals",
+    "description": "Elevate your urban living experience with this chic downtown apartment in the heart of Chicago, Illinois. Offering a seamless blend of style and convenience, this sophisticated residence boasts a spacious layout and contemporary design elements. Step out onto the private balcony to enjoy breathtaking city views, or take advantage of the building's amenities including a fitness center, pet-friendly facilities, and round-the-clock security.",
+    "price": "$3,000/month",
+    "status": "rent",
+    "area": "900 sq ft",
+    "location": "Chicago, Illinois",
+    "facilities": [
+      "Balcony",
+      "Fitness Center",
+      "Pet-friendly",
+      "24/7 Security"
+    ],
+    "image": "https://i.ibb.co/qkGsKhN/downtown-apartment.jpg"
+  },
+  {
+    "id": 6,
+    "estate_title": "Cozy Suburban Townhome for Rent",
+    "segment_name": "Suburban Rentals",
+    "description": "Embrace the comforts of suburban living in this cozy townhome located in the charming community of Atlanta, Georgia. Perfect for families seeking a tranquil retreat, this spacious residence offers a welcoming atmosphere and modern amenities. Enjoy outdoor gatherings in the backyard, take a refreshing dip in the community pool, or relax in the comfort of the spacious interiors, making this townhome the perfect place to call home.",
+    "price": "$2,200/month",
+    "status": "rent",
+    "area": "1,400 sq ft",
+    "location": "Atlanta, Georgia",
+    "facilities": ["Backyard", "Community Pool", "Garage", "Walk-in Closet"],
+    "image": "https://i.ibb.co/4YGdtwB/suburban-townhome.jpg"
+  },
+  {
+    "id": 7,
+    "estate_title": "Stylish Loft in Artsy Neighborhood",
+    "segment_name": "Loft Rentals",
+    "description": "Immerse yourself in the vibrant culture of Portland, Oregon, with this stylish loft located in an eclectic artsy neighborhood. Featuring an open floor plan, exposed brick walls, and high ceilings, this loft exudes urban charm and sophistication. Explore nearby galleries, cafes, and cultural attractions, or simply relax in the modern comforts of home, making every day a celebration of creativity and inspiration.",
+    "price": "$4,500/month",
+    "status": "rent",
+    "area": "1,600 sq ft",
+    "location": "Portland, Oregon",
+    "facilities": [
+      "Open Floor Plan",
+      "Exposed Brick Walls",
+      "High Ceilings",
+      "Modern Kitchen"
+    ],
+    "image": "https://i.ibb.co/nwR2c8P/stylish-loft-jpg.jpg"
+  },
+  {
+    "id": 8,
+    "estate_title": "Seaside Villa with Private Beach",
+    "segment_name": "Beachfront Rentals",
+    "description": "Escape to paradise with this luxurious seaside villa situated in the sunny coastal city of Miami, Florida. Boasting breathtaking ocean views and direct access to a private beach, this exquisite residence offers the ultimate retreat for relaxation and rejuvenation. Indulge in the lavish amenities including an infinity pool, outdoor dining area, and sun deck, creating an idyllic oasis for unforgettable seaside living.",
+    "price": "$6,000/month",
+    "status": "rent",
+    "area": "2,200 sq ft",
+    "location": "Miami, Florida",
+    "facilities": [
+      "Private Beach Access",
+      "Infinity Pool",
+      "Outdoor Dining Area",
+      "Sun Deck"
+    ],
+    "image": "https://i.ibb.co/chC7wsx/seaside-villa.jpg"
+  },
+  {
+    "id": 9,
+    "estate_title": "Cosy Cabin Retreat",
+    "segment_name": "Mountain Rentals",
+    "description": "Retreat to the serene mountains of Denver, Colorado, and discover the charm of this cosy cabin nestled amidst towering pines and scenic beauty. With a rustic wood-burning fireplace, scenic deck, and nearby hiking trails, this mountain retreat offers the perfect blend of tranquility and adventure. Whether you're seeking a romantic getaway or a family escape, this cabin provides a peaceful haven where you can reconnect with nature and create lasting memories.",
+    "price": "$1,200/month",
+    "status": "rent",
+    "area": "1,000 sq ft",
+    "location": "Denver, Colorado",
+    "facilities": [
+      "Wood-burning Fireplace",
+      "Scenic Deck",
+      "Hiking Trails Nearby",
+      "Pet-friendly"
+    ],
+    "image": "https://i.ibb.co/MRZ4GnT/mountain-cabin.jpg"
+  }
+]
