@@ -6,7 +6,7 @@ import Contact from "../pages/Contact";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
 import Profile from "../pages/Profile";
-import EstateDetails from "../components/EstateDetails";
+import EstateDetails from "../pages/EstateDetails";
 import ErrorPage from "../pages/ErrorPage";
 
 export const routes = createBrowserRouter([

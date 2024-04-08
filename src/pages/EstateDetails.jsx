@@ -1,5 +1,7 @@
 import { useParams, useLoaderData } from "react-router-dom";
-import EstateBanner from "./EstateBanner";
+import { Helmet } from "react-helmet";
+
+import EstateBanner from "../components/EstateBanner";
 
 const EstateDetails = () => {
   const estateData = useLoaderData();
@@ -26,6 +28,9 @@ const EstateDetails = () => {
 
   return (
     <>
+      <Helmet>
+        <title>{estate_title && estate_title}</title>
+      </Helmet>
       <EstateBanner bannerImg={image} title={estate_title} />
       <div className="container px-4 py-8 mx-auto">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
