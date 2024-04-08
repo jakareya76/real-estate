@@ -7,11 +7,13 @@ import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
 import Profile from "../pages/Profile";
 import EstateDetails from "../components/EstateDetails";
+import ErrorPage from "../pages/ErrorPage";
 
 export const routes = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
