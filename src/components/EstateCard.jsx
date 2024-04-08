@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import { FaLocationDot, FaChartArea } from "react-icons/fa6";
 
 const EstateCard = ({ propertie }) => {
   const {
+    id,
     estate_title,
     image,
     price,
@@ -49,14 +51,21 @@ const EstateCard = ({ propertie }) => {
 
       <h4 className="text-xl font-bold font-inter">Facilities:</h4>
       <div className="grid grid-cols-2 ">
-        {facilities.map((item) => {
-          return <li className="list-disc">{item}</li>;
+        {facilities.map((item, idx) => {
+          return (
+            <li key={idx} className="list-disc">
+              {item}
+            </li>
+          );
         })}
       </div>
 
-      <button className="w-full mt-3 text-white bg-green-500 btn hover:bg-green-600">
+      <Link
+        to={`/estate-details/${id}`}
+        className="w-full mt-3 text-white bg-green-500 btn hover:bg-green-600"
+      >
         View Property
-      </button>
+      </Link>
     </div>
   );
 };

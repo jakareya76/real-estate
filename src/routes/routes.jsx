@@ -6,6 +6,7 @@ import Contact from "../pages/Contact";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
 import Profile from "../pages/Profile";
+import EstateDetails from "../components/EstateDetails";
 
 export const routes = createBrowserRouter([
   {
@@ -35,6 +36,11 @@ export const routes = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile />,
+      },
+      {
+        path: "/estate-details/:id",
+        element: <EstateDetails />,
+        loader: () => fetch("/data.json"),
       },
     ],
   },

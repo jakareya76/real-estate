@@ -10,11 +10,11 @@ const Banner = () => {
   return (
     <div
       style={{ backgroundImage: 'url("./bg.svg")' }}
-      className="flex flex-col items-center justify-center w-full h-[calc(100vh-120px)] gap-8 bg-center bg-cover backdrop-brightness-90 lg:flex-row"
+      className="flex flex-col items-center justify-center px-5 w-full h-[calc(100vh-120px)] gap-8 bg-center bg-cover backdrop-brightness-90 lg:flex-row"
     >
       <div className="flex flex-col mt-16">
-        <h2 className="font-serif text-6xl font-bold leading-tight">
-          Find the right home <br /> for your family
+        <h2 className="max-w-2xl font-serif text-6xl font-bold leading-tight">
+          Find the right home for your family
         </h2>
         <p className="max-w-2xl my-2 text-zinc-800">
           Step into a world of possibilities as you explore our collection of
