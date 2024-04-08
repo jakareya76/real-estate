@@ -2,7 +2,7 @@
 
 Visit the live site: [MyWebsite](https://www.mywebsite.com)
 
-Welcome to RealEstateHub, your one-stop destination for all your property needs. Whether you're looking to buy, sell, or rent a property, we've got you covered. Visit our live site: [Property Peak](https://www.realestatehub.com)
+Welcome to Property Peak, your one-stop destination for all your property needs. Whether you're looking to buy, sell, or rent a property, we've got you covered. Visit our live site: [Property Peak](https://www.realestatehub.com)
 
 ## Features and Characteristics:
 
