@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Single-family homes",
+    "description": "Detached homes designed for single families, offering privacy and ample space for residents. Often feature yards or gardens and are typically located in residential neighborhoods."
+  },
+  {
+    "name": "Townhouses",
+    "description": "Multi-level residences that share walls with adjacent units, providing a balance between the space of a single-family home and the convenience of a condominium. Commonly found in urban and suburban areas."
+  },
+  {
+    "name": "Apartments",
+    "description": "Multi-unit buildings with individual rental units, ranging from studio apartments to large penthouses. Ideal for individuals or families seeking flexibility and convenience in urban settings."
+  },
+  {
+    "name": "Student housing",
+    "description": "Residential accommodations tailored specifically for students attending colleges or universities. Offer various options such as dormitories, apartments, or shared houses, often located near campus."
+  },
+  {
+    "name": "Senior living communities",
+    "description": "Communities designed to cater to the needs of seniors, offering amenities and services tailored to an active and independent lifestyle or assisted living. Provide social activities, healthcare services, and security."
+  },
+  {
+    "name": "Vacation rentals",
+    "description": "Short-term rental properties available for vacationers, offering an alternative to hotels or resorts. Range from beachfront villas to mountain cabins, providing comfort and convenience during holiday stays."
+  }
+]
