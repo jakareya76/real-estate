@@ -10,9 +10,9 @@ const Banner = () => {
   return (
     <div
       style={{ backgroundImage: 'url("./bg.svg")' }}
-      className="w-full h-screen bg-center bg-cover  -mt-[100px] flex items-center justify-center gap-8"
+      className="flex flex-col items-center justify-center w-full h-[calc(100vh-120px)] gap-8 bg-center bg-cover backdrop-brightness-90 lg:flex-row"
     >
-      <div className="z-20 flex flex-col mt-16">
+      <div className="flex flex-col mt-16">
         <h2 className="font-serif text-6xl font-bold leading-tight">
           Find the right home <br /> for your family
         </h2>
@@ -22,16 +22,16 @@ const Banner = () => {
           townhouses and sophisticated apartments
         </p>
         <div className="flex items-center gap-4 mt-2">
-          <button className="text-white bg-blue-500 hover:bg-blue-600 btn">
+          <button className="text-white bg-blue-500 border-none hover:bg-blue-600 btn">
             Explore All
           </button>
-          <button className="text-white bg-orange-500 hover:bg-orange-600 btn">
+          <button className="text-white bg-orange-500 border-none hover:bg-orange-600 btn">
             Request a Callback
           </button>
         </div>
       </div>
 
-      <div className="w-[40%] h-[60%] mt-20">
+      <div className="w-full lg:w-[40%] lg:h-[60%]">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}

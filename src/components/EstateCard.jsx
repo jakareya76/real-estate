@@ -18,7 +18,7 @@ const EstateCard = ({ propertie }) => {
       <img
         src={image}
         alt="img"
-        className="rounded-xl h-[250px] object-cover"
+        className="rounded-xl h-[250px] w-full object-cover"
       />
       <p className="inline-block px-2 py-1 mt-3 font-bold text-red-400 rounded bg-red-50">
         {segment_name}
