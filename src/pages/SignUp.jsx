@@ -1,18 +1,49 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthProvider";
+import SocialLogin from "../components/SocialLogin";
+import { updateProfile } from "firebase/auth";
+import { auth } from "../firebase/firebase.config";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
+
+  const { signUpUser } = useContext(AuthContext);
+
+  const navigate = useNavigate();
+
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const photo = e.target.photo.value;
+    const password = e.target.password.value;
+
+    try {
+      await signUpUser(email, password);
+      await updateProfile(auth.currentUser, {
+        displayName: name,
+        photoURL: photo,
+      });
+
+      navigate("/");
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
   return (
     <div className="container mx-auto">
       <div className="w-full h-[calc(100vh-100px)] flex flex-col items-center justify-center">
         <div className="w-full max-w-lg p-8 border rounded-xl">
           <h2 className="mb-5 text-2xl font-bold">Sign Up</h2>
-          <form>
+          <form onSubmit={handleSignUp}>
             <label htmlFor="name">
               <input
                 type="text"
+                name="name"
                 placeholder="name"
                 className="w-full px-4 py-3 my-2 border outline-none"
                 required
@@ -21,6 +52,7 @@ const SignUp = () => {
             <label htmlFor="email">
               <input
                 type="email"
+                name="email"
                 placeholder="email"
                 className="w-full px-4 py-3 my-2 border outline-none"
                 required
@@ -29,6 +61,7 @@ const SignUp = () => {
             <label htmlFor="photo">
               <input
                 type="text"
+                name="photo"
                 placeholder="photo url"
                 className="w-full px-4 py-3 my-2 border outline-none"
                 required
@@ -37,6 +70,7 @@ const SignUp = () => {
             <label htmlFor="password" className="relative">
               <input
                 type={`${showPassword ? "text" : "password"}`}
+                name="password"
                 placeholder="password"
                 className="w-full px-4 py-3 my-2 border outline-none"
                 required
@@ -56,18 +90,14 @@ const SignUp = () => {
               )}
             </label>
             <Link to="/login">Already have an account? please login</Link>
-            <button className="w-full my-2 text-xl text-white btn bg-primary hover:bg-blue-800">
+            <button
+              type="submit"
+              className="w-full my-2 text-xl text-white btn bg-primary hover:bg-blue-800"
+            >
               Sign Up
             </button>
           </form>
-          <div className="flex items-center justify-center gap-4 mt-4">
-            <button className="w-[48%] text-lg btn btn-success text-white">
-              Login With Google
-            </button>
-            <button className="w-[48%] text-lg btn btn-warning">
-              Login With Github
-            </button>
-          </div>
+          <SocialLogin />
         </div>
       </div>
     </div>

@@ -8,6 +8,7 @@ import SignUp from "../pages/SignUp";
 import Profile from "../pages/Profile";
 import EstateDetails from "../pages/EstateDetails";
 import ErrorPage from "../pages/ErrorPage";
+import AuthRoute from "./AuthRoute";
 
 export const routes = createBrowserRouter([
   {
@@ -29,11 +30,19 @@ export const routes = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <Login />,
+        element: (
+          <AuthRoute>
+            <Login />
+          </AuthRoute>
+        ),
       },
       {
         path: "/sign-up",
-        element: <SignUp />,
+        element: (
+          <AuthRoute>
+            <SignUp />
+          </AuthRoute>
+        ),
       },
       {
         path: "/profile",

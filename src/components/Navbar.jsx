@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../context/AuthProvider";
 
 const Navbar = () => {
+  const { user, loading, logoutUser } = useContext(AuthContext);
+
   return (
     <nav className="container z-50 mx-auto navbar">
       <div className="navbar-start">
@@ -34,6 +38,11 @@ const Navbar = () => {
             <li className="text-lg">
               <NavLink to="/contact">Contact</NavLink>
             </li>
+            {user && (
+              <li className="text-lg">
+                <NavLink to="/update-profile">Update Profile</NavLink>
+              </li>
+            )}
           </ul>
         </div>
         <a className="text-2xl font-bold text-blue-400 font-inter">
@@ -51,21 +60,51 @@ const Navbar = () => {
           <li className="text-lg">
             <NavLink to="/contact">Contact</NavLink>
           </li>
+          {user && (
+            <li className="text-lg">
+              <NavLink to="/update-profile">Update Profile</NavLink>
+            </li>
+          )}
         </ul>
       </div>
       <div className="gap-5 navbar-end">
-        <Link
-          to="/login"
-          className="text-white bg-blue-400 btn hover:bg-blue-500"
-        >
-          Login
-        </Link>
-        <Link
-          to="/sign-up"
-          className="text-white bg-red-400 btn hover:bg-red-500"
-        >
-          Sign Up
-        </Link>
+        {loading ? (
+          <span className="loading loading-spinner text-error"></span>
+        ) : (
+          <>
+            {user ? (
+              <div className="flex items-center gap-4">
+                <img
+                  src={user?.photoURL}
+                  alt="user"
+                  className="w-12 h-12 rounded-full"
+                />
+                <h2 className="font-bold ">{user?.displayName}</h2>
+                <button
+                  className="text-lg text-white btn btn-error"
+                  onClick={() => logoutUser()}
+                >
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <>
+                <Link
+                  to="/login"
+                  className="text-white bg-blue-400 btn hover:bg-blue-500"
+                >
+                  Login
+                </Link>
+                <Link
+                  to="/sign-up"
+                  className="text-white bg-red-400 btn hover:bg-red-500"
+                >
+                  Sign Up
+                </Link>
+              </>
+            )}
+          </>
+        )}
       </div>
     </nav>
   );

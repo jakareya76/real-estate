@@ -1,19 +1,42 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthProvider";
+
+import SocialLogin from "../components/SocialLogin";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+
+  const { loginUser } = useContext(AuthContext);
+
+  const navigate = useNavigate();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    navigate("/");
+
+    try {
+      await loginUser(email, password);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   return (
     <div className="container mx-auto">
       <div className="w-full h-[calc(100vh-100px)] flex flex-col items-center justify-center">
         <div className="w-full max-w-lg p-8 border rounded-xl">
           <h2 className="mb-5 text-2xl font-bold">Login Now</h2>
-          <form>
+          <form onSubmit={handleLogin}>
             <label htmlFor="email">
               <input
                 type="email"
+                name="email"
                 placeholder="email"
                 className="w-full px-4 py-3 my-2 border outline-none"
               />
@@ -22,6 +45,7 @@ const Login = () => {
               <input
                 type={`${showPassword ? "text" : "password"}`}
                 placeholder="password"
+                name="password"
                 className="w-full px-4 py-3 my-2 border outline-none"
               />
               {showPassword ? (
@@ -43,14 +67,7 @@ const Login = () => {
               Login
             </button>
           </form>
-          <div className="flex items-center justify-center gap-4 mt-4">
-            <button className="w-[48%] text-lg btn btn-success text-white">
-              Login With Google
-            </button>
-            <button className="w-[48%] text-lg btn btn-warning">
-              Login With Github
-            </button>
-          </div>
+          <SocialLogin />
         </div>
       </div>
     </div>
