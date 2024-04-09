@@ -22,6 +22,20 @@ const SignUp = () => {
     const photo = e.target.photo.value;
     const password = e.target.password.value;
 
+    const regex = /^(?=.*[a-z])(?=.*[A-Z]).+$/;
+
+    if (password.length < 6) {
+      toast("Password Must Be 6 Character");
+      return;
+    }
+
+    if (!regex.test(password)) {
+      toast.error(
+        "password must container an uppercase letter and a lowercase letter"
+      );
+      return;
+    }
+
     try {
       const signUpResult = await signUpUser(email, password);
       await updateProfile(auth.currentUser, {
