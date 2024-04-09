@@ -5,13 +5,14 @@ import { AuthContext } from "../context/AuthProvider";
 import SocialLogin from "../components/SocialLogin";
 import { updateProfile } from "firebase/auth";
 import { auth } from "../firebase/firebase.config";
+import { toast } from "react-toastify";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
 
-  const { signUpUser } = useContext(AuthContext);
-
   const navigate = useNavigate();
+
+  const { signUpUser, user } = useContext(AuthContext);
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -22,17 +23,24 @@ const SignUp = () => {
     const password = e.target.password.value;
 
     try {
-      await signUpUser(email, password);
+      const signUpResult = await signUpUser(email, password);
       await updateProfile(auth.currentUser, {
         displayName: name,
         photoURL: photo,
       });
 
-      navigate("/");
+      if (signUpResult) {
+        toast.success("User Sign Up Successfully");
+        navigate("/");
+      }
     } catch (error) {
-      console.log(error.message);
+      toast.success("Something is wrong");
     }
   };
+
+  if (user) {
+    navigate("/");
+  }
 
   return (
     <div className="container mx-auto">

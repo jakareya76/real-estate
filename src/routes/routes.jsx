@@ -8,7 +8,6 @@ import SignUp from "../pages/SignUp";
 import Profile from "../pages/Profile";
 import EstateDetails from "../pages/EstateDetails";
 import ErrorPage from "../pages/ErrorPage";
-import AuthRoute from "./AuthRoute";
 
 export const routes = createBrowserRouter([
   {
@@ -30,19 +29,11 @@ export const routes = createBrowserRouter([
       },
       {
         path: "/login",
-        element: (
-          <AuthRoute>
-            <Login />
-          </AuthRoute>
-        ),
+        element: <Login />,
       },
       {
         path: "/sign-up",
-        element: (
-          <AuthRoute>
-            <SignUp />
-          </AuthRoute>
-        ),
+        element: <SignUp />,
       },
       {
         path: "/profile",

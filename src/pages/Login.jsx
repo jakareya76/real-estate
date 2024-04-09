@@ -1,16 +1,17 @@
 import { useContext, useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../context/AuthProvider";
+import { toast } from "react-toastify";
 
+import { AuthContext } from "../context/AuthProvider";
 import SocialLogin from "../components/SocialLogin";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
 
-  const { loginUser } = useContext(AuthContext);
-
   const navigate = useNavigate();
+
+  const { loginUser, user } = useContext(AuthContext);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -18,14 +19,22 @@ const Login = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    navigate("/");
-
     try {
-      await loginUser(email, password);
+      const loginResult = await loginUser(email, password);
+
+      if (loginResult) {
+        toast.success("Login Successfully");
+        navigate("/");
+      }
     } catch (error) {
-      console.log(error.message);
+      console.log(error);
+      toast.error("Invalid Credentials");
     }
   };
+
+  if (user) {
+    navigate("/");
+  }
 
   return (
     <div className="container mx-auto">

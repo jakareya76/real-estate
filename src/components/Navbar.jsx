@@ -79,6 +79,7 @@ const Navbar = () => {
                   alt="user"
                   className="w-12 h-12 rounded-full"
                 />
+
                 <h2 className="font-bold ">{user?.displayName}</h2>
                 <button
                   className="text-lg text-white btn btn-error"
