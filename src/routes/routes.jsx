@@ -5,9 +5,11 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
-import Profile from "../pages/Profile";
 import EstateDetails from "../pages/EstateDetails";
 import ErrorPage from "../pages/ErrorPage";
+import UpdateProfile from "../pages/UpdateProfile";
+import UserProfile from "../pages/UserProfile";
+import PrivateRoute from "./PrivateRoute";
 
 export const routes = createBrowserRouter([
   {
@@ -36,8 +38,20 @@ export const routes = createBrowserRouter([
         element: <SignUp />,
       },
       {
-        path: "/profile",
-        element: <Profile />,
+        path: "/update-profile",
+        element: (
+          <PrivateRoute>
+            <UpdateProfile />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/user-profile",
+        element: (
+          <PrivateRoute>
+            <UserProfile />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/estate-details/:id",

@@ -39,9 +39,14 @@ const Navbar = () => {
               <NavLink to="/contact">Contact</NavLink>
             </li>
             {user && (
-              <li className="text-lg">
-                <NavLink to="/update-profile">Update Profile</NavLink>
-              </li>
+              <>
+                <li className="text-lg">
+                  <NavLink to="/update-profile">Update Profile</NavLink>
+                </li>
+                <li className="text-lg">
+                  <NavLink to="/user-profile">User Profile</NavLink>
+                </li>
+              </>
             )}
           </ul>
         </div>
@@ -61,9 +66,14 @@ const Navbar = () => {
             <NavLink to="/contact">Contact</NavLink>
           </li>
           {user && (
-            <li className="text-lg">
-              <NavLink to="/update-profile">Update Profile</NavLink>
-            </li>
+            <>
+              <li className="text-lg">
+                <NavLink to="/update-profile">Update Profile</NavLink>
+              </li>
+              <li className="text-lg">
+                <NavLink to="/user-profile">User Profile</NavLink>
+              </li>
+            </>
           )}
         </ul>
       </div>
@@ -74,13 +84,24 @@ const Navbar = () => {
           <>
             {user ? (
               <div className="flex items-center gap-4">
-                <img
-                  src={user?.photoURL}
-                  alt="user"
-                  className="w-12 h-12 rounded-full"
-                />
+                <div className="dropdown dropdown-hover">
+                  <div tabIndex={0} role="button" className="m-1 ">
+                    <img
+                      src={user?.photoURL}
+                      alt="user"
+                      className="w-12 h-12 rounded-full"
+                    />
+                  </div>
+                  <ul
+                    tabIndex={0}
+                    className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+                  >
+                    <li>
+                      <h2 className="font-bold ">{user?.displayName}</h2>
+                    </li>
+                  </ul>
+                </div>
 
-                <h2 className="font-bold ">{user?.displayName}</h2>
                 <button
                   className="text-lg text-white btn btn-error"
                   onClick={() => logoutUser()}
