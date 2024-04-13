@@ -11,10 +11,10 @@ const Banner = () => {
     <div
       style={{ backgroundImage: 'url("./bg.svg")' }}
       data-aos="fade-up"
-      className="flex  flex-col items-center justify-center px-5 w-full h-[calc(100vh-120px)] gap-8 bg-center bg-cover backdrop-brightness-90 lg:flex-row"
+      className="flex flex-col items-center justify-center w-full gap-8 px-5 py-10 bg-center bg-cover lg:py-24 backdrop-brightness-90 lg:flex-row"
     >
       <div className="flex flex-col mt-16">
-        <h2 className="max-w-2xl font-serif text-6xl font-bold leading-tight">
+        <h2 className="max-w-2xl font-serif text-3xl font-bold leading-tight md:text-5xl xl:text-6xl">
           Find the right home for your family
         </h2>
         <p className="max-w-2xl my-2 text-zinc-800">

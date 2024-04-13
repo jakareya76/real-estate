@@ -6,7 +6,7 @@ const Navbar = () => {
   const { user, loading, logoutUser } = useContext(AuthContext);
 
   return (
-    <nav className="container z-50 mx-auto navbar">
+    <nav className="container mx-auto navbar">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
