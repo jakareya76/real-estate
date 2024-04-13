@@ -2,7 +2,7 @@ import LocationMap from "../components/LocationMap";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen hero bg-base-200">
+    <div className="min-h-screen hero bg-base-200" data-aos="fade-up">
       <div className="flex-col w-full gap-5 hero-content lg:flex-row">
         <div className="w-full text-center lg:w-1/2 lg:text-left">
           <LocationMap />

@@ -33,9 +33,6 @@ const Navbar = () => {
               <NavLink to="/">Home</NavLink>
             </li>
             <li className="text-lg">
-              <NavLink to="/about">About</NavLink>
-            </li>
-            <li className="text-lg">
               <NavLink to="/contact">Contact</NavLink>
             </li>
             {user && (
@@ -58,9 +55,6 @@ const Navbar = () => {
         <ul className="gap-4 px-1 menu menu-horizontal">
           <li className="text-lg">
             <NavLink to="/">Home</NavLink>
-          </li>
-          <li className="text-lg">
-            <NavLink to="/about">About</NavLink>
           </li>
           <li className="text-lg">
             <NavLink to="/contact">Contact</NavLink>

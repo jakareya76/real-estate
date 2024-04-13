@@ -32,7 +32,7 @@ const EstateDetails = () => {
         <title>{estate_title && estate_title}</title>
       </Helmet>
       <EstateBanner bannerImg={image} title={estate_title} />
-      <div className="container px-4 py-8 mx-auto">
+      <div className="container px-4 py-8 mx-auto" data-aos="fade-up">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <div className="md:col-span-1">
             <img src={image} alt={estate_title} className="w-full" />

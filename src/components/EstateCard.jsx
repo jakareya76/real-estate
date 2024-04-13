@@ -16,7 +16,7 @@ const EstateCard = ({ propertie }) => {
   } = propertie;
 
   return (
-    <div className="p-4 border rounded-xl">
+    <div className="p-4 border rounded-xl" data-aos="fade-in">
       <img
         src={image}
         alt="img"

@@ -7,7 +7,10 @@ const UserProfile = () => {
   return (
     <div className="container mx-auto">
       <div className="w-full h-[calc(100vh-100px)] flex items-center justify-center">
-        <div className="flex flex-col justify-center gap-5 p-5 border rounded-md md:flex-row">
+        <div
+          className="flex flex-col justify-center gap-5 p-5 border rounded-md md:flex-row"
+          data-aos="fade-up"
+        >
           <img
             src={user.photoURL}
             alt="user"
