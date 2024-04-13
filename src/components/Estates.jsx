@@ -16,7 +16,7 @@ const Estates = () => {
   }, []);
 
   return (
-    <div className="container py-16 mx-auto" data-aos="fade-up">
+    <div className="container py-16 mx-auto">
       <h2 className="font-serif text-3xl font-bold text-center">
         Explore Properties
       </h2>
