@@ -48,7 +48,13 @@ const SignUp = () => {
         navigate("/");
       }
     } catch (error) {
-      toast.success("Something is wrong");
+      console.log(error.message);
+
+      if (error.message === "Firebase: Error (auth/email-already-in-use).") {
+        toast.error("email already in use please use a different email");
+      } else {
+        toast.error("Something is wrong");
+      }
     }
   };
 

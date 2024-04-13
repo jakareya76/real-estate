@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../context/AuthProvider";
 
 const SocialLogin = () => {
-  const { loginWithGoogle } = useContext(AuthContext);
+  const { loginWithGoogle, loginWithGithub } = useContext(AuthContext);
 
   return (
     <div className="flex items-center justify-center gap-4 mt-4">
@@ -12,7 +12,10 @@ const SocialLogin = () => {
       >
         Login With Google
       </button>
-      <button className="w-[48%] text-lg btn btn-warning">
+      <button
+        className="w-[48%] text-lg btn btn-warning"
+        onClick={() => loginWithGithub()}
+      >
         Login With Github
       </button>
     </div>
