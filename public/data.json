@@ -14,7 +14,7 @@
       "Concierge Service",
       "Parking Garage"
     ],
-    "image": "https://i.ibb.co/s6jNs2X/modern-condo.jpg"
+    "image": "/modern-condo.webp"
   },
   {
     "id": 2,
@@ -26,7 +26,7 @@
     "area": "2,500 sq ft",
     "location": "Seattle, Washington",
     "facilities": ["Garden", "Deck", "Home Office", "Playroom"],
-    "image": "https://i.ibb.co/ZL9t60Y/family-home.jpg"
+    "image": "/family-home.webp"
   },
   {
     "id": 3,
@@ -43,7 +43,7 @@
       "Home Automation",
       "24/7 Security"
     ],
-    "image": "https://i.ibb.co/YZjZWw6/luxury-penthouse.jpg"
+    "image": "/luxury-penthouse.webp"
   },
   {
     "id": 4,
@@ -60,7 +60,7 @@
       "Garden Shed",
       "Nature Trails"
     ],
-    "image": "https://i.ibb.co/gF1PFZD/countryside-cottage.jpg"
+    "image": "/countryside-cottage.webp"
   },
   {
     "id": 5,
@@ -77,7 +77,7 @@
       "Pet-friendly",
       "24/7 Security"
     ],
-    "image": "https://i.ibb.co/qkGsKhN/downtown-apartment.jpg"
+    "image": "/downtown-apartment.webp"
   },
   {
     "id": 6,
@@ -89,7 +89,7 @@
     "area": "1,400 sq ft",
     "location": "Atlanta, Georgia",
     "facilities": ["Backyard", "Community Pool", "Garage", "Walk-in Closet"],
-    "image": "https://i.ibb.co/4YGdtwB/suburban-townhome.jpg"
+    "image": "/suburban-townhome.webp"
   },
   {
     "id": 7,
@@ -106,7 +106,7 @@
       "High Ceilings",
       "Modern Kitchen"
     ],
-    "image": "https://i.ibb.co/nwR2c8P/stylish-loft-jpg.jpg"
+    "image": "/stylish-loft-jpg.webp"
   },
   {
     "id": 8,
@@ -123,7 +123,7 @@
       "Outdoor Dining Area",
       "Sun Deck"
     ],
-    "image": "https://i.ibb.co/chC7wsx/seaside-villa.jpg"
+    "image": "/seaside-villa.webp"
   },
   {
     "id": 9,
@@ -140,6 +140,6 @@
       "Hiking Trails Nearby",
       "Pet-friendly"
     ],
-    "image": "https://i.ibb.co/MRZ4GnT/mountain-cabin.jpg"
+    "image": "/mountain-cabin.webp"
   }
 ]
